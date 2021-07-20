@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+    username: root
+    password: 123456
+
+
+
+#配置mybatis规则
+mybatis:
+  #  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mapper/*.xml
+
+  configuration:  #指定mybatis配置
+    map-underscore-to-camel-case: true  #开启驼峰命名规则
+
+#logging:
+#  file:
+#    path: log/blog.log
